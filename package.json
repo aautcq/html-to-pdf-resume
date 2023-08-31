@@ -1,0 +1,27 @@
+{
+  "name": "html-to-pdf-resume",
+  "version": "1.0.0",
+  "description": "HTML to PDF resume",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf *.pdf && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aautcq/html-to-pdf-resume.git"
+  },
+  "keywords": [
+    "CV",
+    "Resume"
+  ],
+  "author": "Adrien Autricque <adrien.autricque@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aautcq/html-to-pdf-resume/issues"
+  },
+  "homepage": "https://github.com/aautcq/html-to-pdf-resume#readme",
+  "devDependencies": {
+    "puppeteer": "^21.1.1",
+    "rimraf": "^5.0.1"
+  }
+}
