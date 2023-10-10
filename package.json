@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/aautcq/html-to-pdf-resume#readme",
   "devDependencies": {
+    "@actions/exec": "^1.1.1",
     "puppeteer": "^21.1.1",
-    "rimraf": "^5.0.1"
+    "rimraf": "^5.0.1",
+    "sharp": "^0.32.6"
   }
 }
