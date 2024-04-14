@@ -9,6 +9,10 @@
       src="https://kit.fontawesome.com/829a3299e8.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="components/infoItem.js"></script>
+    <script defer src="components/resumeItem.js"></script>
+    <script defer src="components/resumeAchievementItem.js"></script>
+    <script defer src="components/skillProgress.js"></script>
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
@@ -27,44 +31,32 @@
               <h4 class="regular">Jedi master</h4>
             </div>
             <ul>
-              <li>
-                <div class="icon">
-                  <i class="fas fa-birthday-cake"></i>
-                </div>
-                <div class="data">90 yo</div>
-              </li>
-              <li>
-                <div class="icon">
-                  <i class="fas fa-map-signs"></i>
-                </div>
-                <div class="data">Jedi temple, Coruscant</div>
-              </li>
-              <li>
-                <div class="icon">
-                  <i class="fas fa-envelope"></i>
-                </div>
-                <div class="data">
-                  <a
-                    href="mailto:obiwan.kenobi@yopmail.com"
-                    title="obiwan.kenobi@yopmail.com"
-                    target="_blank"
-                    >obiwan.kenobi@yopmail.com</a
-                  >
-                </div>
-              </li>
-              <li>
-                <div class="icon">
-                  <i class="fab fa-linkedin"></i>
-                </div>
-                <div class="data">
-                  <a
-                    href="https://www.linkedin.com/in/obi-wan-kenobi-574061201/"
-                    title="linkedin.com/in/obi-wan-kenobi-574061201"
-                    target="_blank"
-                    >linkedin.com/in/obi-wan-kenobi-574061201</a
-                  >
-                </div>
-              </li>
+              <info-item>
+                <i slot="icon" class="fas fa-birthday-cake"></i>
+                90 yo
+              </info-item>
+              <info-item>
+                <i slot="icon" class="fas fa-map-signs"></i>
+                Jedi temple, Coruscant
+              </info-item>
+              <info-item>
+                <i slot="icon" class="fas fa-envelope"></i>
+                <a
+                  href="mailto:obiwan.kenobi@yopmail.com"
+                  title="obiwan.kenobi@yopmail.com"
+                  target="_blank"
+                  >obiwan.kenobi@yopmail.com</a
+                >
+              </info-item>
+              <info-item>
+                <i slot="icon" class="fab fa-linkedin"></i>
+                <a
+                  href="https://www.linkedin.com/in/obi-wan-kenobi-574061201/"
+                  title="linkedin.com/in/obi-wan-kenobi-574061201"
+                  target="_blank"
+                  >linkedin.com/in/obi-wan-kenobi-574061201</a
+                >
+              </info-item>
             </ul>
           </div>
           <div class="resume_item resume_skills">
@@ -72,27 +64,9 @@
               <h2 class="bold">Skills</h2>
             </div>
             <ul>
-              <li>
-                <div class="skill_name">Light saber</div>
-                <div class="skill_progress">
-                  <span style="width: 100%"></span>
-                </div>
-                <div class="skill_per">100%</div>
-              </li>
-              <li>
-                <div class="skill_name">The Force</div>
-                <div class="skill_progress">
-                  <span style="width: 90%"></span>
-                </div>
-                <div class="skill_per">90%</div>
-              </li>
-              <li>
-                <div class="skill_name">High ground</div>
-                <div class="skill_progress">
-                  <span style="width: 90%"></span>
-                </div>
-                <div class="skill_per">90%</div>
-              </li>
+              <skill-progress value="100">Light saber</skill-progress>
+              <skill-progress value="90">The Force</skill-progress>
+              <skill-progress value="90">High ground</skill-progress>
             </ul>
           </div>
         </div>
@@ -119,32 +93,22 @@
             <h2 class="bold">Experiences</h2>
           </div>
           <ul>
-            <li>
-              <div class="date">0 BBY - 34 ABY</div>
-              <div class="info">
-                <h3 class="semi-bold">Retirement into Force ghostdom</h3>
-                <p>
-                  Advice giving to Luke Skywalker and Rey, and general
-                  meditation
-                </p>
-              </div>
-            </li>
-            <li>
-              <div class="date">19 - 0 ABY</div>
-              <div class="info">
-                <h3 class="semi-bold">Desert Adventures</h3>
-                <p>Survivalism and negotiation with Tusken Raiders</p>
-              </div>
-            </li>
-            <li>
-              <div class="date">31 - 19 BBY</div>
-              <div class="info">
-                <h3 class="semi-bold">General in the Clone Wars</h3>
-                <p>
-                  Commanding the 212th Attack Battalion and the 7th Sky Corps
-                </p>
-              </div>
-            </li>
+            <resume-item title="Retirement into Force ghostdom" dates="0 BBY - 34 ABY">
+              <p slot="description">
+                Advice giving to Luke Skywalker and Rey, and general
+                meditation
+              </p>
+            </resume-item>
+            <resume-item title="Desert adventures" dates="19 - 0 ABY">
+              <p slot="description">
+                Survivalism and negotiation with Tusken Raiders
+              </p>
+            </resume-item>
+            <resume-item title="General in the Clone Wars" dates="31 - 19 BBY" last>
+              <p slot="description">
+                Commanding the 212th Attack Battalion and the 7th Sky Corps
+              </p>
+            </resume-item>
           </ul>
         </div>
         <div class="resume_item resume_education">
@@ -152,23 +116,17 @@
             <h2 class="bold">Formation</h2>
           </div>
           <ul>
-            <li>
-              <div class="date">41 - 32 BBY</div>
-              <div class="info">
-                <h3 class="semi-bold">Padawan adventures</h3>
-                <p>
-                  Apprenticeship under Qui-Gon Jinn and Jedi Knight
-                  qualification
-                </p>
-              </div>
-            </li>
-            <li>
-              <div class="date">56 - 41 BBY</div>
-              <div class="info">
-                <h3 class="semi-bold">Temple life and youngling years</h3>
-                <p>Jedi Initiate training and Jedi Temple studies</p>
-              </div>
-            </li>
+            <resume-item title="Padawan adventures" dates="41 - 32 BBY">
+              <p slot="description">
+                Apprenticeship under Qui-Gon Jinn and Jedi Knight
+                qualification
+              </p>
+            </resume-item>
+            <resume-item title="Temple life and youngling years" dates="56 - 41 BBY" last>
+              <p slot="description">
+                Jedi initial training and Jedi Temple studies
+              </p>
+            </resume-item>
           </ul>
         </div>
         <div class="resume_item resume_hobby">
@@ -179,9 +137,7 @@
             <li title="Jedi"><i class="fas fa-jedi"></i></li>
             <li title="Senate"><i class="fab fa-galactic-senate"></i></li>
             <li title="Travels"><i class="fas fa-hiking"></i></li>
-            <li title="Republic">
-              <i class="fab fa-galactic-republic"></i>
-            </li>
+            <li title="Republic"><i class="fab fa-galactic-republic"></i></li>
             <li title="Nature"><i class="fab fa-pagelines"></i></li>
           </ul>
         </div>

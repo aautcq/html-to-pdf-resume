@@ -4,7 +4,7 @@ In this repo, you'll find a HTML/CSS template for a resume, along with a JS scri
 
 ## HTML resume
 
-It is sharable as is, and responsive. Which is wow.
+It is sharable as is, and responsive. Also uses [Custom Elements](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements). Which is wow.
 
 ## Build to PDF
 

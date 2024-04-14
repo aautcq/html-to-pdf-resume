@@ -1,11 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap');
 
 :root {
-  --main-bg-color: #0f172a;
-  --content-color: #cbd5e1;
-  --progress-color: #475569;
-  --border-color: #94a3b8;
-  --hobbie-color: #64748b;
+  --white: #fff;
+  --slate-50: #f7fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
 }
 
 * {
@@ -20,7 +26,7 @@ body {
   background: #585c68;
   font-size: 12px;
   line-height: 22px;
-  color: #555555;
+  color: var(--slate-800);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,6 +38,11 @@ a {
   transition: opacity 0.3s ease;
 }
 
+a.styled {
+  text-decoration: underline solid var(--slate-500);
+  text-decoration-thickness: 0.5px;
+}
+
 a:hover {
   opacity: 0.8;
 }
@@ -40,11 +51,14 @@ a:hover {
   font-weight: 700;
   font-size: 20px;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .semi-bold {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px;
+  margin-bottom: 5px;
+  color: var(--slate-700);
 }
 
 .resume {
@@ -64,7 +78,7 @@ a:hover {
 .resume .resume_left {
   flex: 1 1 auto;
   min-width: 280px;
-  background: var(--main-bg-color);
+  background: linear-gradient(to left top, var(--slate-900), var(--slate-800));
 }
 
 .resume .resume_left .resume_profile {
@@ -81,6 +95,7 @@ a:hover {
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
+  border: 3px solid var(--slate-300);
 }
 
 .resume .resume_left .resume_content {
@@ -93,11 +108,19 @@ a:hover {
 }
 
 .resume .resume_left .bold {
-  color: #fff;
+  color: var(--slate-50);
 }
 
 .resume .resume_left .regular {
-  color: var(--content-color);
+  color: var(--slate-300);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 10px;
+  margin-top: 10px;
+}
+
+.resume .resume_left .regular--sm {
+  color: var(--slate-400);
   font-weight: normal;
   font-size: 12px;
 }
@@ -107,11 +130,16 @@ a:hover {
 }
 
 .resume .resume_left .resume_item {
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--slate-600);
 }
 
 .resume .resume_right .resume_item {
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--slate-200);
+}
+
+.resume .resume_right .resume_item .resume_item_title {
+  display: flex;
+  gap: 10px;
 }
 
 .resume .resume_item.resume_about {
@@ -142,120 +170,32 @@ a:hover {
   margin-bottom: 0;
 }
 
-.resume .resume_left ul li .icon {
-  width: 32px;
-  height: 32px;
-  background: #fff;
-  color: var(--main-bg-color);
-  border-radius: 50%;
-  margin-right: 10px;
-  font-size: 18px;
-  position: relative;
-  flex: none;
-}
-
-.resume .icon i,
-.resume .resume_right .resume_hobby ul li i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .resume .resume_left ul li .data {
-  color: var(--content-color);
-}
-
-.resume .resume_left .resume_skills ul li {
-  display: flex;
-  margin-bottom: 10px;
-  color: var(--content-color);
-  justify-content: space-between;
-  align-items: center;
-}
-
-.resume .resume_left .resume_skills ul li .skill_name {
-  width: 40%;
-}
-
-.resume .resume_left .resume_skills ul li .skill_progress {
-  width: 35%;
-  margin: 0 5px;
-  height: 5px;
-  background: var(--progress-color);
-  position: relative;
-}
-
-.resume .resume_left .resume_skills ul li .skill_per {
-  width: 15%;
-}
-
-.resume .resume_left .resume_skills ul li .skill_progress span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background: #fff;
+  color: var(--slate-100);
 }
 
 .resume .resume_right {
   max-width: 520px;
   min-width: 280px;
   flex: 0 1 auto;
-  background: #fff;
+  background: var(--white);
   padding: 25px;
 }
 
 .resume .resume_right .bold {
-  color: var(--main-bg-color);
+  color: var(--slate-800);
 }
 
-.resume .resume_right .resume_work ul,
-.resume .resume_right .resume_education ul {
+.resume .resume_right .resume_work > ul,
+.resume .resume_right .resume_education > ul {
   padding-left: 20px;
   overflow: hidden;
 }
 
-.resume .resume_right ul li {
-  position: relative;
-}
-
-.resume .resume_right ul li .date {
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 7px;
-}
-
-.resume .resume_right ul li:not(:last-child) .info {
-  margin-bottom: 20px;
-}
-
-.resume .resume_right ul li .info .location {
-  font-weight: 300;
-  margin-left: 5px;
-}
-
-.resume .resume_right .resume_work ul li:before,
-.resume .resume_right .resume_education ul li:before {
-  content: '';
-  position: absolute;
-  top: 5px;
-  left: -20px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  border: 2px solid var(--main-bg-color);
-}
-
-.resume .resume_right .resume_work ul li:after,
-.resume .resume_right .resume_education ul li:after {
-  content: '';
-  position: absolute;
-  top: 14px;
-  left: -16px;
-  width: 2px;
-  height: calc(100% + 12px);
-  background: var(--main-bg-color);
+.resume .resume_right .resume_work > ul ul,
+.resume .resume_right .resume_education > ul ul {
+  padding-left: 15px;
+  overflow: hidden;
 }
 
 .resume .resume_right .resume_hobby ul {
@@ -263,6 +203,13 @@ a:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 35px;
+}
+
+.resume .resume_right .resume_hobby ul li i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media only screen and (max-width: 560px) {
@@ -275,10 +222,10 @@ a:hover {
   flex: none;
   width: 40px;
   height: 40px;
-  border: 2px solid var(--hobbie-color);
+  border: 2px solid var(--slate-600);
   border-radius: 50%;
   position: relative;
-  color: var(--main-bg-color);
+  color: var(--slate-800);
 }
 
 .resume .resume_right .resume_hobby ul li i {
@@ -292,7 +239,7 @@ a:hover {
   right: calc(-2px - 100%);
   width: 38px;
   height: 2px;
-  background: var(--hobbie-color);
+  background: var(--slate-600);
 }
 
 @media only screen and (max-width: 560px) {
