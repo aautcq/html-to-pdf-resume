@@ -25,22 +25,22 @@
           />
         </div>
         <div class="resume_content">
-          <div class="resume_item resume_info">
+          <section class="resume_item resume_info">
             <div class="title">
               <h1 class="bold">Obi-Wan Kenobi</h1>
               <h4 class="regular">Jedi master</h4>
             </div>
             <ul>
               <info-item>
-                <i slot="icon" class="fas fa-birthday-cake"></i>
+                <i slot="icon" aria-hidden="true" class="fas fa-birthday-cake"></i>
                 90 yo
               </info-item>
               <info-item>
-                <i slot="icon" class="fas fa-map-signs"></i>
+                <i slot="icon" aria-hidden="true" class="fas fa-map-signs"></i>
                 Jedi temple, Coruscant
               </info-item>
               <info-item>
-                <i slot="icon" class="fas fa-envelope"></i>
+                <i slot="icon" aria-hidden="true" class="fas fa-envelope"></i>
                 <a
                   href="mailto:obiwan.kenobi@yopmail.com"
                   title="obiwan.kenobi@yopmail.com"
@@ -49,7 +49,7 @@
                 >
               </info-item>
               <info-item>
-                <i slot="icon" class="fab fa-linkedin"></i>
+                <i slot="icon" aria-hidden="true" class="fab fa-linkedin"></i>
                 <a
                   href="https://www.linkedin.com/in/obi-wan-kenobi-574061201/"
                   title="linkedin.com/in/obi-wan-kenobi-574061201"
@@ -58,8 +58,8 @@
                 >
               </info-item>
             </ul>
-          </div>
-          <div class="resume_item resume_skills">
+          </section>
+          <section class="resume_item resume_skills">
             <div class="title">
               <h2 class="bold">Skills</h2>
             </div>
@@ -68,11 +68,11 @@
               <skill-progress value="90">The Force</skill-progress>
               <skill-progress value="90">High ground</skill-progress>
             </ul>
-          </div>
+          </section>
         </div>
       </div>
       <div class="resume_right">
-        <div class="resume_item resume_about">
+        <section class="resume_item resume_about">
           <div class="title">
             <h2 class="bold">About</h2>
           </div>
@@ -87,8 +87,8 @@
             I've imparted guidance and wisdom, leaving an enduring legacy on the
             path of the Jedi.
           </p>
-        </div>
-        <div class="resume_item resume_work">
+        </section>
+        <section class="resume_item resume_work">
           <div class="title">
             <h2 class="bold">Experiences</h2>
           </div>
@@ -110,8 +110,8 @@
               </p>
             </resume-item>
           </ul>
-        </div>
-        <div class="resume_item resume_education">
+        </section>
+        <section class="resume_item resume_education">
           <div class="title">
             <h2 class="bold">Formation</h2>
           </div>
@@ -128,8 +128,8 @@
               </p>
             </resume-item>
           </ul>
-        </div>
-        <div class="resume_item resume_hobby">
+        </section>
+        <section class="resume_item resume_hobby">
           <div class="title">
             <h2 class="bold">Hobbies</h2>
           </div>
@@ -140,8 +140,22 @@
             <li title="Republic"><i class="fab fa-galactic-republic"></i></li>
             <li title="Nature"><i class="fab fa-pagelines"></i></li>
           </ul>
-        </div>
+        </section>
       </div>
     </div>
+
+    <a
+      href="cv-obi-wan-kenobi.pdf"
+      download
+      target="_blank"
+      rel="noopener"
+      type="application/pdf"
+      class="download-link"
+      title="Download the PDF version of my resume"
+      data-pdf-exclude="true"
+    >
+      <i class="fas fa-file-pdf"></i>
+      Download
+    </a>
   </body>
 </html>
